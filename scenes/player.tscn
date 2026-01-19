@@ -3,9 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://bjiq7c3hpp32k" path="res://art/penguin.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://cjkrry8tny83b" path="res://player.gd" id="1_g2els"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g2els"]
-radius = 55.0
-height = 136.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
+size = Vector2(111.5, 53)
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_g2els")
@@ -16,5 +15,5 @@ scale = Vector2(11.1875, 11.1875)
 texture = ExtResource("1_3vyb7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(76, 81)
-shape = SubResource("CapsuleShape2D_g2els")
+position = Vector2(77.25, 121.5)
+shape = SubResource("RectangleShape2D_g2els")
