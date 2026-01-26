@@ -1,0 +1,14 @@
+Node2D
+Area2D
+AnimatedSprite2D
+Sprite2D
+CollisionShape2D
+StaticBody2D
+ColorRect
+VideoStreamPlayer
+AnimationPlayer
+CanvasLayer
+Label
+Node
+RichTextLabel
+Timer

@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://canpr4u3l5mvo"]
+
+[ext_resource type="Script" uid="uid://boo8b4bwceute" path="res://scripts/game_manager.gd" id="1_glms7"]
+[ext_resource type="FontFile" uid="uid://t3u56gfvgjiv" path="res://pixel-font-4x4.otf" id="2_udu3i"]
+
+[node name="gameManager" type="Node"]
+script = ExtResource("1_glms7")
+
+[node name="coinLabel" type="Label" parent="."]
+offset_left = 26.0
+offset_top = 59.0
+offset_right = 209.0
+offset_bottom = 119.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_udu3i")
+theme_override_font_sizes/font_size = 18
+text = "asdf"
+
+[node name="hotCocoaLabel" type="Label" parent="."]
+offset_left = 26.0
+offset_top = 25.0
+offset_right = 107.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_udu3i")
+theme_override_font_sizes/font_size = 18
+text = "asdf"

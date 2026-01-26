@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://d18yw5lgh14nw"]
+
+[ext_resource type="Texture2D" uid="uid://bkqq517rgqvsp" path="res://art/market/booth.png" id="1_2mu6b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2mu6b"]
+size = Vector2(352.5, 45)
+
+[node name="Booth" type="StaticBody2D"]
+z_index = -2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(9, 9)
+texture = ExtResource("1_2mu6b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.75, 40.5)
+shape = SubResource("RectangleShape2D_2mu6b")

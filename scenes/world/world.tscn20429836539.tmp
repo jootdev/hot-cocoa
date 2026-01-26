@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=3 uid="uid://bkqc35gy8lgng"]
+
+[ext_resource type="PackedScene" uid="uid://canpr4u3l5mvo" path="res://scenes/game_manager.tscn" id="1_t5ptc"]
+[ext_resource type="Texture2D" uid="uid://dpk8dryajmo7k" path="res://art/bg.png" id="2_bq33v"]
+[ext_resource type="PackedScene" uid="uid://ccsysxi7oe10p" path="res://scenes/player.tscn" id="3_j2gmx"]
+[ext_resource type="Texture2D" uid="uid://saglty3p2wcv" path="res://art/border.png" id="4_1yooq"]
+[ext_resource type="PackedScene" uid="uid://c3sokfddk8sbi" path="res://scenes/world/subwayEntrance.tscn" id="5_gb53w"]
+[ext_resource type="PackedScene" uid="uid://b0mfocs82s21r" path="res://scenes/world/subwayStairs.tscn" id="6_5qq27"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqjtg"]
+size = Vector2(1229, 34)
+
+[node name="world" type="Node2D"]
+
+[node name="gameManager" parent="." instance=ExtResource("1_t5ptc")]
+
+[node name="bg" type="TextureRect" parent="."]
+z_index = -10
+offset_left = -182.0
+offset_top = -116.0
+offset_right = 1423.0
+offset_bottom = 855.0
+texture = ExtResource("2_bq33v")
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="player" parent="." instance=ExtResource("3_j2gmx")]
+position = Vector2(532, 121)
+
+[node name="border" type="StaticBody2D" parent="."]
+z_index = -1
+position = Vector2(964, 289)
+
+[node name="walls" type="Sprite2D" parent="border"]
+position = Vector2(-346, 174)
+scale = Vector2(8.3984375, 5.1888514)
+texture = ExtResource("4_1yooq")
+
+[node name="top" type="CollisionShape2D" parent="border"]
+position = Vector2(-351, -114)
+shape = SubResource("RectangleShape2D_yqjtg")
+
+[node name="bottom" type="CollisionShape2D" parent="border"]
+position = Vector2(-385, 430)
+shape = SubResource("RectangleShape2D_yqjtg")
+
+[node name="left" type="CollisionShape2D" parent="border"]
+position = Vector2(-750, 311)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_yqjtg")
+
+[node name="right" type="CollisionShape2D" parent="border"]
+position = Vector2(57, 311)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_yqjtg")
+
+[node name="subwayEntrance" parent="." instance=ExtResource("5_gb53w")]
+position = Vector2(613, 184)
+
+[node name="cafeDoor" parent="." instance=ExtResource("6_5qq27")]
+position = Vector2(0, -6)
+next_scene = "uid://bu72lx2erups1"

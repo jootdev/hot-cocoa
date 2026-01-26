@@ -1,0 +1,179 @@
+[gd_scene load_steps=14 format=3 uid="uid://5v7v6fcd8xk5"]
+
+[ext_resource type="Script" uid="uid://dvn715gtbmcar" path="res://scripts/scene_manager.gd" id="1_we8k5"]
+[ext_resource type="Shader" uid="uid://dbslpackabinc" path="res://shaders/diamond_sweep.gdshader" id="2_65mdo"]
+[ext_resource type="Texture2D" uid="uid://dj03l005cd7s" path="res://art/animations/subwayTransition1.png" id="3_6k21d"]
+[ext_resource type="Texture2D" uid="uid://56vid36fhu1k" path="res://art/animations/subwayTransition2.png" id="4_cjhpt"]
+[ext_resource type="Texture2D" uid="uid://dtxtsfeinrm51" path="res://art/animations/subwayTransition3.png" id="5_hhobr"]
+[ext_resource type="Texture2D" uid="uid://bkgyprh0f3kph" path="res://art/animations/subwayTransition4.png" id="6_wofdf"]
+
+[sub_resource type="Animation" id="Animation_65mdo"]
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:material:shader_parameter/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:material:shader_parameter/fill")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_kad1h"]
+resource_name = "as_in"
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:material:shader_parameter/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:material:shader_parameter/fill")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_2lhpl"]
+resource_name = "as_out"
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:material:shader_parameter/fill")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:material:shader_parameter/progress")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_65mdo"]
+_data = {
+&"RESET": SubResource("Animation_65mdo"),
+&"as_in": SubResource("Animation_kad1h"),
+&"as_out": SubResource("Animation_2lhpl")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b81s6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ae61e"]
+shader = ExtResource("2_65mdo")
+shader_parameter/progress = 0.0
+shader_parameter/size = 40.0
+shader_parameter/fill = false
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pgnk5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_6k21d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cjhpt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hhobr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wofdf")
+}],
+"loop": true,
+"name": &"subway",
+"speed": 5.0
+}]
+
+[node name="SceneManager" type="CanvasLayer"]
+script = ExtResource("1_we8k5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_65mdo")
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_b81s6")
+offset_left = -11.0
+offset_top = -12.0
+offset_right = 1289.0
+offset_bottom = 722.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("ShaderMaterial_ae61e")
+position = Vector2(637.99994, 365.00003)
+scale = Vector2(4.08125, 4.402778)
+sprite_frames = SubResource("SpriteFrames_pgnk5")
+animation = &"subway"
+autoplay = "subway"
+frame_progress = 0.7139093
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

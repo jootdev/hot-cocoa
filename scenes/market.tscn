@@ -1,0 +1,70 @@
+[gd_scene load_steps=10 format=3 uid="uid://bu72lx2erups1"]
+
+[ext_resource type="PackedScene" uid="uid://canpr4u3l5mvo" path="res://scenes/global/game_manager.tscn" id="1_4q0km"]
+[ext_resource type="Texture2D" uid="uid://dpk8dryajmo7k" path="res://art/bg.png" id="2_q0rtp"]
+[ext_resource type="PackedScene" uid="uid://ccsysxi7oe10p" path="res://scenes/global/player.tscn" id="3_lsn5p"]
+[ext_resource type="Texture2D" uid="uid://saglty3p2wcv" path="res://art/border.png" id="4_3krxk"]
+[ext_resource type="PackedScene" uid="uid://d18yw5lgh14nw" path="res://scenes/market/booth.tscn" id="5_d6tgm"]
+[ext_resource type="PackedScene" uid="uid://baja25pgyjq8v" path="res://scenes/market/marketEntrance.tscn" id="6_g5yo1"]
+[ext_resource type="PackedScene" uid="uid://tn8wb2fbsgmc" path="res://scenes/market/marketHighlight.tscn" id="8_ennqm"]
+[ext_resource type="PackedScene" uid="uid://cwhpfskef3efb" path="res://scenes/market/boothHighlight.tscn" id="9_hvm52"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qifwr"]
+size = Vector2(1229, 34)
+
+[node name="market" type="Node2D"]
+
+[node name="gameManager" parent="." instance=ExtResource("1_4q0km")]
+
+[node name="bg" type="TextureRect" parent="."]
+z_index = -10
+offset_left = -182.0
+offset_top = -116.0
+offset_right = 1423.0
+offset_bottom = 855.0
+texture = ExtResource("2_q0rtp")
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="player" parent="." instance=ExtResource("3_lsn5p")]
+position = Vector2(218, 347)
+
+[node name="border" type="StaticBody2D" parent="."]
+z_index = -5
+position = Vector2(964, 289)
+
+[node name="walls" type="Sprite2D" parent="border"]
+position = Vector2(-346, 174)
+scale = Vector2(8.3984375, 5.1888514)
+texture = ExtResource("4_3krxk")
+
+[node name="top" type="CollisionShape2D" parent="border"]
+position = Vector2(-351, -114)
+shape = SubResource("RectangleShape2D_qifwr")
+
+[node name="bottom" type="CollisionShape2D" parent="border"]
+position = Vector2(-385, 430)
+shape = SubResource("RectangleShape2D_qifwr")
+
+[node name="left" type="CollisionShape2D" parent="border"]
+position = Vector2(-750, 311)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_qifwr")
+
+[node name="right" type="CollisionShape2D" parent="border"]
+position = Vector2(57, 311)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_qifwr")
+
+[node name="Booth" parent="." instance=ExtResource("5_d6tgm")]
+z_index = -4
+position = Vector2(606, 239)
+
+[node name="boothHighlight" parent="Booth" instance=ExtResource("9_hvm52")]
+position = Vector2(-737, -208)
+
+[node name="marketEntrance" parent="." instance=ExtResource("6_g5yo1")]
+position = Vector2(-632, 236)
+
+[node name="marketHighlight" parent="." instance=ExtResource("8_ennqm")]
+position = Vector2(-632, 236)

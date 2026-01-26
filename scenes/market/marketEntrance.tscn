@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://baja25pgyjq8v"]
+
+[ext_resource type="Texture2D" uid="uid://d1b3a0k7l6thk" path="res://art/market/market subway entrance.png" id="2_u7k6o"]
+
+[node name="marketEntrance" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(737.00006, 208)
+scale = Vector2(5, 5)
+texture = ExtResource("2_u7k6o")
