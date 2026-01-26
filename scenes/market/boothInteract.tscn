@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://cwhpfskef3efb"]
+
+[ext_resource type="Script" uid="uid://cp3roktyejsba" path="res://scripts/boothPurchase.gd" id="1_km76e"]
+[ext_resource type="Texture2D" uid="uid://bkjvsjoqd72ro" path="res://art/animations/penguin/highlighted penguins1.png" id="2_km76e"]
+[ext_resource type="Texture2D" uid="uid://bbkvalg0x0dh1" path="res://art/animations/penguin/highlighted penguins2.png" id="3_cxwja"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ik204"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_km76e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_cxwja")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qfnet"]
+size = Vector2(192, 98.25)
+
+[node name="boothHighlight" type="Area2D"]
+script = ExtResource("1_km76e")
+hotCocoaPrice = 10
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(737.00006, 208)
+scale = Vector2(9, 9)
+sprite_frames = SubResource("SpriteFrames_ik204")
+autoplay = "default"
+frame_progress = 0.89095277
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(739, 263.875)
+shape = SubResource("RectangleShape2D_qfnet")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

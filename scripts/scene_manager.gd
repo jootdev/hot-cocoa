@@ -5,6 +5,7 @@ signal transitioned_out()
 
 @onready var animation = $AnimationPlayer
 @onready var animatedSprite = $AnimatedSprite2D
+@onready var audioPlayer = $AudioStreamPlayer2D
 @onready var last_scene_name
 
 var scene_path = "res://scenes/"
@@ -18,6 +19,8 @@ func change_scene(from, to_scene_name: String) -> void:
 	transition_in()
 	await transitioned_in
 	
+	audioPlayer.play()
+	
 	await get_tree().create_timer(3.0).timeout
 	
 	var full_path = scene_path + to_scene_name + ".tscn"
@@ -25,6 +28,8 @@ func change_scene(from, to_scene_name: String) -> void:
 	
 	transition_out()
 	await transitioned_out
+	
+	audioPlayer.stop()
 	
 func transition_in() -> void:
 	animation.play("as_in")

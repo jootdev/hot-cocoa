@@ -1,5 +1,13 @@
-res://scenes/global/player.tscn
+res://scenes/world/coin.tscn
 res://shaders/diamond_sweep.gdshader
 res://shaders/horizontal_sweep.gdshader
 res://shaders/vertical_sweep.gdshader
 res://shaders/horizontal_split.gdshader
+res://scripts/coin.gd
+res://scripts/game_manager.gd
+res://scenes/global/game_manager.tscn
+res://scenes/world/trash.tscn
+res://scripts/trash.gd
+res://scripts/audio_manager.gd
+res://scenes/market.tscn
+res://scenes/market/boothInteract.tscn

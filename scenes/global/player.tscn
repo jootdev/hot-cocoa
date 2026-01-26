@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://ccsysxi7oe10p"]
+[gd_scene load_steps=5 format=3 uid="uid://ccsysxi7oe10p"]
 
 [ext_resource type="Texture2D" uid="uid://bjiq7c3hpp32k" path="res://art/world/penguin.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://cjkrry8tny83b" path="res://scripts/player.gd" id="1_g2els"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
 size = Vector2(79, 62)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jniyc"]
+size = Vector2(205, 181)
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_g2els")
@@ -18,3 +21,9 @@ texture = ExtResource("1_3vyb7")
 [node name="worldCollision" type="CollisionShape2D" parent="."]
 position = Vector2(82.5, 117)
 shape = SubResource("RectangleShape2D_g2els")
+
+[node name="proximity" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="proximity"]
+position = Vector2(83.5, 109.5)
+shape = SubResource("RectangleShape2D_jniyc")
