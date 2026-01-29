@@ -1,0 +1,15 @@
+res://scenes/archive/counter.tscn::c774e0d1c129b2a8855e87600c700c47::1769395558::res://.godot/exported/133200997/export-dce6bd40d50b2a182f12b89287615397-counter.scn
+res://scenes/global/audio_manager.tscn::9da69a0d2239feac6a8e400442826b48::1769465065::res://.godot/exported/133200997/export-97d90c057c47246819e22fef03f2012f-audio_manager.scn
+res://scenes/global/game_manager.tscn::9442306a9b8b2f43f6837c0f11ad65bc::1769469324::res://.godot/exported/133200997/export-0c5e3267264fe6ace7d39d05c5e050ed-game_manager.scn
+res://scenes/global/player.tscn::afccdaa2be2edea00751769380376ec9::1769468209::res://.godot/exported/133200997/export-c230e48138993e23f2371ba7e1ad518b-player.scn
+res://scenes/global/scene_manager.tscn::ecbd82ceb3cb469165611a7566f578a6::1769465962::res://.godot/exported/133200997/export-fb4a99b6939882b007b4fbd280909e0f-scene_manager.scn
+res://scenes/market/booth.tscn::e4222d2272c07218476000cdfb44f684::1769399736::res://.godot/exported/133200997/export-479843c313c53d0fec50f8ad4fbf15e3-booth.scn
+res://scenes/market/boothInteract.tscn::5bc3ccca063a3935df90d9371f5bad1d::1769470003::res://.godot/exported/133200997/export-902816367f5f9ab4d720b608b854c450-boothInteract.scn
+res://scenes/market/market_subwayEntrance.tscn::b9e2e9fd8ed135c772e5be497d956085::1769398510::res://.godot/exported/133200997/export-39e66fe85a5b4907a7143c3bc7ca28ef-market_subwayEntrance.scn
+res://scenes/market/market_subwayHighlight.tscn::e0f357d1edf7defc7cece74cddc8c825::1769465962::res://.godot/exported/133200997/export-eadbdecfc8ca0eaeabd147af9475c3dd-market_subwayHighlight.scn
+res://scenes/world/coin.tscn::64e5f36515a3372511febbe9b4c085fa::1769469213::res://.godot/exported/133200997/export-7489844ff0488f3e27996bcb3a7bfc83-coin.scn
+res://scenes/world/subwayEntrance.tscn::6f7818df2fc0b537b888dbe426f35ee3::1769395605::res://.godot/exported/133200997/export-daf8b2cd98a567be4fb9bbbbd61993c8-subwayEntrance.scn
+res://scenes/world/subwayHighlight.tscn::fc6e1c1f863f3285d7c7bc0c9ca2a6b4::1769468280::res://.godot/exported/133200997/export-6a99083b68cfe21cf6c4b0bf3dd25037-subwayHighlight.scn
+res://scenes/world/trash.tscn::a255213135605625a1aa1f5fa9e88027::1769469810::res://.godot/exported/133200997/export-5d907533e297afa70c5776767f1ef653-trash.scn
+res://scenes/market.tscn::f10a9ab06c6d3484ed6e8c19f1656fa9::1769469979::res://.godot/exported/133200997/export-e5a9d5c0ee16185f36739f68e6d8b4b1-market.scn
+res://scenes/world.tscn::2f4b15c4eb57e1d4c2b2f84344eca05a::1769464419::res://.godot/exported/133200997/export-6b9c1b1fd6ae6f795188dfdc89e222b0-world.scn

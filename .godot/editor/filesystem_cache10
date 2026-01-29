@@ -1,5 +1,6 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1769469158
+::res://::1769570536
+export_presets.cfg::TextFile::-1::1769470301::0::1::::<><><>0<>0<><>::
 pixel-font-4x4.otf::FontFile::1392660157656932841::1769321450::1769321455::1::::<><><>0<>0<>482c7d425072b53dd944d847bbe49819<>res://.godot/imported/pixel-font-4x4.otf-8a1fb92d3a552f4596d0253adf2b33d7.fontdata::
 ::res://art/::1769395605
 bg.png::CompressedTexture2D::8234748431318169074::1768890384::1768890410::1::::<><><>0<>0<>e4a1a09710a926d68916f0b405d012b0<>res://.godot/imported/bg.png-ca4dd02b5a08671d1e8200d74b5e8347.ctex::
@@ -62,8 +63,8 @@ subway.wav::AudioStreamWAV::8363922782925822763::1769462532::1769462537::1::::<>
 subwayv2.wav::AudioStreamWAV::2241867326846247301::1769462988::1769462988::1::::<><><>0<>0<>fdc7115c5b348faad7e717b4e5dec06f<>res://.godot/imported/subwayv2.wav-47375943f69cdbdd470c0e05fa2743b4.sample::
 subwayv3.wav::AudioStreamWAV::8880713659142112140::1769463961::1769464059::1::::<><><>0<>0<>c92a412419d86e96b0f5d66637b5e60d<>res://.godot/imported/subwayv3.wav-934c4f472e151c8493a4c66ca052209d.sample::
 trash.wav::AudioStreamWAV::4244653406661980952::1769468581::1769468581::1::::<><><>0<>0<>8dc282ad9962a3ec4f532c6ac89c43e8<>res://.godot/imported/trash.wav-e28d6df0cbad22541f998efb46b9e8d1.sample::
-::res://scenes/::1769464419
-market.tscn::PackedScene::3857917897073345962::1769463701::0::1::::<><><>0<>0<><>::uid://canpr4u3l5mvo::::res://scenes/global/game_manager.tscn<>uid://dpk8dryajmo7k::::res://art/bg.png<>uid://ccsysxi7oe10p::::res://scenes/global/player.tscn<>uid://saglty3p2wcv::::res://art/border.png<>uid://d18yw5lgh14nw::::res://scenes/market/booth.tscn<>uid://baja25pgyjq8v::::res://scenes/market/market_subwayEntrance.tscn<>uid://tn8wb2fbsgmc::::res://scenes/market/market_subwayHighlight.tscn<>uid://cwhpfskef3efb::::res://scenes/market/boothInteract.tscn
+::res://scenes/::1769469979
+market.tscn::PackedScene::3857917897073345962::1769469979::0::1::::<><><>0<>0<><>::uid://canpr4u3l5mvo::::res://scenes/global/game_manager.tscn<>uid://dpk8dryajmo7k::::res://art/bg.png<>uid://ccsysxi7oe10p::::res://scenes/global/player.tscn<>uid://saglty3p2wcv::::res://art/border.png<>uid://d18yw5lgh14nw::::res://scenes/market/booth.tscn<>uid://baja25pgyjq8v::::res://scenes/market/market_subwayEntrance.tscn<>uid://tn8wb2fbsgmc::::res://scenes/market/market_subwayHighlight.tscn<>uid://cwhpfskef3efb::::res://scenes/market/boothInteract.tscn
 world.tscn::PackedScene::3121512186457571136::1769464419::0::1::::<><><>0<>0<><>::uid://canpr4u3l5mvo::::res://scenes/global/game_manager.tscn<>uid://dpk8dryajmo7k::::res://art/bg.png<>uid://ccsysxi7oe10p::::res://scenes/global/player.tscn<>uid://saglty3p2wcv::::res://art/border.png<>uid://c3sokfddk8sbi::::res://scenes/world/subwayEntrance.tscn<>uid://b0mfocs82s21r::::res://scenes/world/subwayHighlight.tscn
 ::res://scenes/archive/::1769395975
 counter.tscn::PackedScene::121461960138066948::1769395558::0::1::::<><><>0<>0<><>::uid://ge3ua6ln3dix::::res://art/archive/counter.png
@@ -72,9 +73,9 @@ audio_manager.tscn::PackedScene::4340995861604121776::1769465065::0::1::::<><><>
 game_manager.tscn::PackedScene::4800620946938187176::1769469324::0::1::::<><><>0<>0<><>::uid://boo8b4bwceute::::res://scripts/game_manager.gd<>uid://t3u56gfvgjiv::::res://pixel-font-4x4.otf
 player.tscn::PackedScene::4951868428220345161::1769468209::0::1::::<><><>0<>0<><>::uid://bjiq7c3hpp32k::::res://art/world/penguin.png<>uid://cjkrry8tny83b::::res://scripts/player.gd
 scene_manager.tscn::PackedScene::2150999323460836870::1769465962::0::1::::<><><>0<>0<><>::uid://dvn715gtbmcar::::res://scripts/scene_manager.gd<>uid://dbslpackabinc::::res://shaders/diamond_sweep.gdshader<>uid://dj03l005cd7s::::res://art/animations/subway/subwayTransition1.png<>uid://56vid36fhu1k::::res://art/animations/subway/subwayTransition2.png<>uid://dtxtsfeinrm51::::res://art/animations/subway/subwayTransition3.png<>uid://bkgyprh0f3kph::::res://art/animations/subway/subwayTransition4.png<>uid://668hy2ci2o8t::::res://audio/subwayv2.wav
-::res://scenes/market/::1769465962
+::res://scenes/market/::1769470003
 booth.tscn::PackedScene::9053794539820796292::1769399736::0::1::::<><><>0<>0<><>::uid://bkqq517rgqvsp::::res://art/market/booth.png
-boothInteract.tscn::PackedScene::6332367216620229867::1769465953::0::1::::<><><>0<>0<><>::uid://cp3roktyejsba::::res://scripts/boothPurchase.gd<>uid://bkjvsjoqd72ro::::res://art/animations/penguin/highlighted penguins1.png<>uid://bbkvalg0x0dh1::::res://art/animations/penguin/highlighted penguins2.png
+boothInteract.tscn::PackedScene::6332367216620229867::1769470003::0::1::::<><><>0<>0<><>::uid://cp3roktyejsba::::res://scripts/boothPurchase.gd<>uid://bkjvsjoqd72ro::::res://art/animations/penguin/highlighted penguins1.png<>uid://bbkvalg0x0dh1::::res://art/animations/penguin/highlighted penguins2.png
 market_subwayEntrance.tscn::PackedScene::2405049899092699775::1769398510::0::1::::<><><>0<>0<><>::uid://d1b3a0k7l6thk::::res://art/market/market subway entrance.png
 market_subwayHighlight.tscn::PackedScene::1362467982614891058::1769465962::0::1::::<><><>0<>0<><>::uid://bl2iy7rq4lv16::::res://scripts/subwayEntrance.gd<>uid://byvxua7icsx6u::::res://art/animations/subway/market subway entrance1.png<>uid://bgbnod6ubky2e::::res://art/animations/subway/market subway entrance2.png
 ::res://scenes/world/::1769469810
